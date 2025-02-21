@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1er mini-jeu</title>
+    <link rel="stylesheet" href="/style/1er_jeu.css">
 </head>
 <body>
-    <a href="/view/index.html"><button>Retourne sur l'index</button></a>
+    <!-- Bouton retour sur l'index -->
+    <a href="/view/index.html"><button>Retourner sur l'index</button></a>
+    <main>
+        <!-- Explication des regles et affichage de texte -->
+        <section id="TextArea">
+            <p class="rules_p">Ce jeu de morpion a été construit dans sa version 1 pour être joué à deux joueurs.</p>
+            <p class="rules_p">Joueur 1 : Tu auras la couleur <span id="blue">BLEUE</span> et utiliseras les "O".</p>
+            <p class="rules_p">Joueur 2 : Tu auras la couleur <span id="red">ROUGE</span> et tu utiliseras les "X".</p>
+        </section>
+        <!-- section pour la zone du morpion -->
+        <section id="gameBoard">
+            <!-- Le plateau de jeu -->
+            <div>
+                <!-- ligne 1 celule 1-->
+                <div></div>
+                <!-- ligne 1 celule 2-->
+                <div></div>
+                <!-- ligne 1 celule 3-->
+                <div></div>
+                <!-- ligne 2 celule 1-->
+                <div></div>
+                <!-- ligne 2 celule 2-->
+                <div></div>
+                <!-- ligne 2 celule 3-->
+                <div></div>
+                <!-- ligne 3 celule 1-->
+                <div></div>
+                <!-- ligne 3 celule 2-->
+                <div></div>
+                <!-- ligne 3 celule 3-->
+                <div></div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
