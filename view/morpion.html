@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1er mini-jeu</title>
-    <link rel="stylesheet" href="/style/1er_jeu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style/morpion.css">
+    <script src="/javascript/main.js" defer></script>
 </head>
 <body>
     <!-- Bouton retour sur l'index -->
     <a href="/view/index.html"><button>Retourner sur l'index</button></a>
     <main>
         <!-- Explication des regles et affichage de texte -->
-        <section id="TextArea">
+        <section id="textArea">
             <p class="rules_p">Ce jeu de morpion a été construit dans sa version 1 pour être joué à deux joueurs.</p>
             <p class="rules_p">Joueur 1 : Tu auras la couleur <span id="blue">BLEUE</span> et utiliseras les "O".</p>
             <p class="rules_p">Joueur 2 : Tu auras la couleur <span id="red">ROUGE</span> et tu utiliseras les "X".</p>
         </section>
         <!-- section pour la zone du morpion -->
-        <section id="gameBoard">
+        <section>
             <!-- Le plateau de jeu -->
-            <div>
+            <div id="gameBoard">
                 <!-- ligne 1 celule 1-->
                 <div></div>
                 <!-- ligne 1 celule 2-->
@@ -40,6 +42,7 @@
                 <div></div>
             </div>
         </section>
+        <button id="btn_jouer" onclick="init()">Jouer</button>
     </main>
 </body>
 </html>
