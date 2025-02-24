@@ -52,7 +52,6 @@
     }
 }
 
-
 main {
     display: flex;
     flex-direction: column;
@@ -63,7 +62,13 @@ main {
 }
 
 h1 {
-    color: rgb(55, 108, 172);
+    /* color: rgb(55, 108, 172); */
+    color: transparent;
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
     margin-bottom: 50px;
     animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -89,4 +94,3 @@ article {
     align-items: center;
     animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-

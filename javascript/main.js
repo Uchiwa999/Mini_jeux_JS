@@ -7,53 +7,70 @@ function init() {
     console.log("Entrer dans la fonction init()")
     // Déclaration des variables / constantes
     let gameBoard = new Array();
-
+    let hasWon = false;
+    let isPlayer1 = true;
     const VIDE = " ";
-    const J1 = new Image;
     // Initialiser le plateau de jeu avec les valeurs de départ
-    initGameBoard(gameBoard);
+    initGameBoard(gameBoard, VIDE);
     console.log(gameBoard);
-    playOnce(gameBoard);
+    // Rendre le plateau de jeu cliquable 
+    playOnce();
 }
 
 /**
- * Fonction qui initialise l
+ * Fonction qui initialise le plateau de jeu du morpiton sa valeur de départ
  * @param {Array} plateauDeJeu 
+ * @param {string} caractere
  */
-function initGameBoard(plateauDeJeu) {
+function initGameBoard(plateauDeJeu, caractere) {
     console.log("Entrée dans la fonction initGameBoard()");
-    const VIDE = " ";
     const TAILLE = 9;
-
     for (let i = 0; i < TAILLE; i++) {
-        plateauDeJeu[i] = VIDE;
+        plateauDeJeu[i] = caractere;
     }
 };
 
 
-function playOnce(plateauDeJeu) {
+function playOnce() {
     console.log("Entrée dans la fonction playOnce()");
     // Déclaration des variables
-    let hasWon = false;
-    let isPlayer1 = true;
+
     // Déclaration des variables pour le DOM
-    let dom_textArea = document.getElementById("textArea");
-    console.log(plateauDeJeu);
+    let dom_all_cells = document.getElementsByClassName("cell");
+    let newP = document.createElement("p");
 
-    do {
-        // Quand c'est au joueur 1 de jouer 
-        //         FALSE
-        if (isPlayer1 === true) {
-
-        }
-        // Si c'est au joueur 2 de jouer
-        else {
-
-        }
-        isPlayer1 != isPlayer1;
-    } while (hasWon === false);
-
+    //do {
+    // Quand c'est au joueur 1 de jouer 
+    //         FALSE
+    for (let i = 0; i < dom_all_cells.length; i++) {
+        dom_all_cells[i].setAttribute("onclick", "detectCell(" + i + ")");
+        console.log(dom_all_cells[i]);
+    }
 }
+/**
+ *  for (let i = dom_all_p.length - 1; i >= 0; i--) {
+            dom_all_p[i].remove();
+        }
+        newP.innerText = "Joueur 1, A toi de jouer !";
+        //newP.setAttribute = ("class", ".player1");
+        dom_textArea.appendChild(newP);
+        dom_textArea.setAttribute("class", "player1");
+        console.log(dom_all_p);
+
+
+        let dom_textArea = document.getElementById("textArea");
+        let dom_all_p = document.getElementsByTagName("p");
+ */
+
+/**
+ * La documentation...
+ * @param {Number} himSelf 
+ */
+function detectCell(index) {
+    console.log(index);
+}
+
+//}
 
 
 // Démarrer une partie
